@@ -1,0 +1,47 @@
+
+.text-align-padding (@align:justify; @padding:10px) {
+  text-align: @align;
+  padding: @padding;
+}
+
+.section2-FotoSize-padding (@widht:120px;@height:170px;@padding:10px) {
+  width: @widht;
+  height: @height;
+  padding: @padding;
+}
+
+.MediaScreen (@rules; @max:909px;) {
+  @media screen and (max-width: @max) {
+    @rules();
+  }
+}
+
+.section3-block () {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin: 15px;
+    border: 1px solid;
+    flex:1;
+    background: @bg-section;
+    @media screen and (max-width:475px) {
+      flex-wrap:nowrap;
+      flex:inherit;
+    }
+  }
+
+.section3-block-foto (){
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    @media screen and (max-width:475px) {
+    height: 100%;
+    }
+}
+
+.section3-block-text () {
+    .text-align-padding;
+    @media screen and (max-width:475px) {
+    flex:2;
+    }
+}  

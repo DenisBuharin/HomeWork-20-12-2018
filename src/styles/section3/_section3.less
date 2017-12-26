@@ -1,0 +1,44 @@
+.section3 {
+	display: flex;
+	flex-wrap:wrap;
+
+	&-block1 {
+		.section3-block ();
+		&:hover {
+			background: darken(@bg-section, 30%);
+			transition: 2s;
+		}
+
+		&-foto{
+			.section3-block-foto();
+		}		
+			
+		&-text {
+			.section3-block-text ();
+		}
+	}
+
+	&-block2 {
+		.section3-block ();
+		&:hover {
+			background: darken(@bg-section, 30%);
+			transition: 2s;
+		}
+
+		&-foto {
+			.section3-block-foto();
+		}
+
+		&-text {
+			.section3-block-text ();
+			.MediaScreen ({order:-1; width: 100%;}475px);
+		}
+	}		
+}
+
+
+@media screen and (max-width:475px) {
+	.box-img{
+		flex:1;
+	}
+}
